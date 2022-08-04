@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Slider | Autoplay With Navigation Visibility</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="img-slider">
+        <div class="slide active">
+            <img src="/assets/img/backgrounds-img-description/694704.png" alt="">
+            <div class="info">
+                <h2>Date Alive</h2>
+                <p>Itsuka Shidou es un estudiante de instituto que, durante las vacaciones, vive en primera persona un suceso sin igual. Ante él aparece una chica con armadura, que destruye la ciudad que tiene delante. La chica responde ante el nombre de
+                    Tooka, y según la hermana de Shidou, es un espíritu (?seirei?, &#31934;&#38666;), los cuales causaron un terremoto espacio-temporal 30 años atrás. La hermana de Shidou revela que su verdadera identidad es la de la líder de la organización
+                    Ratatosk y le cuenta a Shidou que la única manera que tienen de salvar el mundo es hacer que Tooka se acabe enamorando de él y tengan una cita.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="/assets/img/backgrounds-img-description/tm5NtcORJ5PkW54lqQPfbBexHev.jpg" alt="">
+            <div class="info">
+                <h2>Tensei SHitara Slime Data Ken</h2>
+                <p>Satoru Mikami es un hombre de 37 años que tiene un trabajo que no le gusta, sin salida y que no es feliz con la vida que lleva, pero cuando muere a manos de un ladrón y piensa que es su fin, se despierta descubriendo que se ha reencarnado
+                    en un mundo de magia y espada….</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="/assets/img/backgrounds-img-description/spy_family_anime-art.webp" alt="">
+            <div class="info">
+                <h2>Spy x Family</h2>
+                <p>Todo el mundo tiene una parte de sí mismos que no puede mostrar a los demás. En una era en la que las naciones de todo el mundo se encuentran involucradas en una feroz guerra de información a puerta cerrada, Ostania y Westalis llevan décadas
+                    en guerra fría. La División de Inteligencia de Westalis (WISE) envía a su mejor espía, "Twilight"....</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="/assets/img/backgrounds-img-description/Tokyo-Revengers.jpg" alt="">
+            <div class="info">
+                <h2>Tokyo Revengers</h2>
+                <p>Mientras miraba las noticias, Takemichi Hanagaki se entera de que su novia de secundaria, Hinata Tachibana, ha muerto. La única chica que alguna vez se fijó en él fue asesinada por un grupo de criminales conocidos como la Banda Tokyo Manji.
+                    Takemichi vive en un viejo departamento con delgadas paredes, y en su trabajo...</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="/assets/img/backgrounds-img-description/HD-wallpaper-blood-c-uniform-katana-saya-kisaragi-clamp-blood-c.jpg" alt="">
+            <div class="info">
+                <h2>Blood C</h2>
+                <p>La historia sigue a Saya Kisaragi como alumna de segundo curso del Instituto Privado Sanabara, donde lleva una vida normal y difruta de su diario vivir.Sin embargo,su padre le encomienda la misión como heredera del templo Ukishima de acabar
+                    con los "furukimonos"(Ancianos) usando la espada Mikami(Espada de los dioses) para preservar....</p>
+            </div>
+        </div>
+        <div class="navigation">
+            <div class="btn active"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var slides = document.querySelectorAll('.slide');
+        var btns = document.querySelectorAll('.btn');
+        let currentSlide = 1;
+
+        // Javascript for image slider manual navigation
+        var manualNav = function(manual) {
+            slides.forEach((slide) => {
+                slide.classList.remove('active');
+
+                btns.forEach((btn) => {
+                    btn.classList.remove('active');
+                });
+            });
+
+            slides[manual].classList.add('active');
+            btns[manual].classList.add('active');
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                manualNav(i);
+                currentSlide = i;
+            });
+        });
+
+        // Javascript for image slider autoplay navigation
+        var repeat = function(activeClass) {
+            let active = document.getElementsByClassName('active');
+            let i = 1;
+
+            var repeater = () => {
+                setTimeout(function() {
+                    [...active].forEach((activeSlide) => {
+                        activeSlide.classList.remove('active');
+                    });
+
+                    slides[i].classList.add('active');
+                    btns[i].classList.add('active');
+                    i++;
+
+                    if (slides.length == i) {
+                        i = 0;
+                    }
+                    if (i >= slides.length) {
+                        return;
+                    }
+                    repeater();
+                }, 10000);
+            }
+            repeater();
+        }
+        repeat();
+    </script>
+
+</body>
+
+</html>
