@@ -1,0 +1,222 @@
+.description-story-1 {
+    background: linear-gradient(90deg, rgba(45, 67, 91, 1) 0%, rgba(29, 192, 253, 1) 50%, rgba(66, 205, 215, 1) 100%);
+    background: linear-gradient(90deg, rgb(82, 152, 226) 11%, rgb(48, 166, 209) 50%, rgba(181, 25, 196, 0.715) 100%);
+    background-image: linear-gradient(135deg, #00B7D4, #323cc2, #2F3F80, #161569, #1a0b4b, #2c0429, #0c0005);
+    background: #456ddab7;
+}
+
+.buton-category {
+    width: 100px;
+    height: 50px;
+    padding: 2px;
+    margin: 3px;
+    list-style: none;
+    background: #3e68e6b6;
+    color: rgb(255, 255, 255);
+}
+
+.carte {
+    border-radius: 18px;
+}
+
+.carte:hover {
+    background-color: #00115f89;
+    color: white;
+    transform: scale(1.2);
+    transition: all 370ms;
+}
+
+.carte__title {
+    margin-left: 27px;
+}
+
+.xtn-section {
+    display: flex;
+    color: #Ffff;
+    position: relative;
+    padding: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    text-align: center;
+    row-gap: 2.5rem;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    /*background-color: #182c5ac2;*/
+}
+
+.ommg {
+    border-radius: 15px 0px 0px 15px;
+    width: 180px;
+    display: inline-block;
+}
+
+.title-blood {
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    justify-content: center;
+}
+
+.portada {
+    width: 150px;
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 15px 0px 0px 15px;
+    height: 210px;
+}
+
+.xtn-details {
+    display: inline-block;
+    position: relative;
+    flex-direction: column;
+    min-width: 300px;
+    border-radius: 25px;
+    width: 800px;
+    width: 1030px;
+    /*  background-image: url("/assets/img/backgrounds-img-description/HD-wallpaper-blood-c-uniform-katana-saya-kisaragi-clamp-blood-c.jpg");*/
+    background-size: cover;
+    padding: 20px;
+    border-radius: 21px;
+    /* background: linear-gradient(145deg, #d0d1d2, #0627e6e8);
+    box-shadow: 15px 15px 39px #302d2dd2;*/
+    background-color: #182c5ac2;
+}
+
+.xtn-title {
+    display: inline-block;
+    flex-direction: column;
+    width: 300px;
+    position: relative;
+    height: auto;
+    margin: 20px;
+}
+
+.siso {
+    text-align: center;
+    row-gap: 2.5rem;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-try {
+    height: 270px;
+    width: 450px;
+    border-radius: 10px;
+    align-items: center;
+    display: inline-block;
+}
+
+.h1-title {
+    width: 231px;
+    display: inline-block;
+    padding: 5px;
+    margin: 0 auto;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-blood {
+    font-family: sans-serif;
+}
+
+@media screen and (max-width: 320px) {
+    .grid-try {
+        height: 170px;
+        width: 450px;
+        align-items: center;
+        display: inline-block;
+    }
+    .h1-title {
+        width: 250px;
+        height: 130px;
+        /*background: #3a2989;*/
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .grid-try {
+        height: 200px;
+        width: 450px;
+        align-items: center;
+        display: inline-block;
+    }
+    .h1-title {
+        width: 250px;
+        height: 130px;
+        /*background: #3a2989;*/
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .grid-try {
+        height: 200px;
+        width: 450px;
+        display: inline-block;
+    }
+    .h1-title {
+        width: 250px;
+        height: 130px;
+        /*background: #3a2989;*/
+        display: inline-block;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .grid-try {
+        height: 250px;
+        width: 410px;
+        display: inline-block;
+    }
+    .h1-title {
+        width: 450px;
+        height: 130px;
+        /*background: #3a2989;*/
+        display: inline-block;
+    }
+}
+
+
+/*Por si hay otra temporda*/
+
+.space-ctn {
+    margin: 20px;
+    display: flex;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.temp {
+    display: block;
+    padding: 15px;
+    margin-top: 40px;
+    list-style: none;
+    width: 160px;
+    cursor: pointer;
+    height: 50px;
+    color: white;
+    text-decoration: none;
+    background: #227dcdab;
+    background: linear-gradient(#9365ff, #6f3bff);
+    border-radius: 18px;
+    animation-name: next;
+    animation-timing-function: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+.temp:hover {
+    transform: scale(1.2);
+    transition: all 370ms;
+}
